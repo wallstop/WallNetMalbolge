@@ -10,7 +10,7 @@ namespace WallNetMalbolge.Generators
     {
         private const int NumOpCodes = 3;
 
-        private const int MutationLength = 5;
+        private const int MutationLength = 4;
 
         public static readonly char TerminalOpCode =
             MalbolgeInterpreter.InstructionsToOpCodes[MalbolgeInterpreter.Instruction.End];
@@ -24,8 +24,8 @@ namespace WallNetMalbolge.Generators
             new ReadOnlyCollection<char>(new List<char>(NumOpCodes)
             {
                 MalbolgeInterpreter.InstructionsToOpCodes[MalbolgeInterpreter.Instruction.Nop],
-                MalbolgeInterpreter.InstructionsToOpCodes[MalbolgeInterpreter.Instruction.Crazy],
-                MalbolgeInterpreter.InstructionsToOpCodes[MalbolgeInterpreter.Instruction.Rotate]
+                MalbolgeInterpreter.InstructionsToOpCodes[MalbolgeInterpreter.Instruction.Move],
+                MalbolgeInterpreter.InstructionsToOpCodes[MalbolgeInterpreter.Instruction.Jump]
             });
 
         private static ReadOnlyCollection<string> ForcedOpCodeMutations { get; }
